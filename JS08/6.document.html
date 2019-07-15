@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css"></style>
+</head>
+<body>
+    <h1>document</h1>
+    <hr>
+
+    <script>
+    if (document.all) {
+        // IE 8
+        document.write('IE');
+        // console.log(document.all);
+    } else {
+        // 非IE 
+        document.write('非IE');
+    }
+    // console.log(document.all);
+
+
+    // console.dir(document);
+    // console.log(document);
+    
+    // 只读
+    console.log('域名: ' + document.domain);
+    // 高实时性
+    console.log('文档最后一次修改时间: ' + document.lastModified);
+    console.log('上一个页面: '  + document.referrer);
+    console.log('URL: '  + document.URL);
+
+    // document.domain = 'http://163.com'; // NO
+
+
+
+    // title
+    console.log(document.title);
+    document.title = '5555';
+
+
+
+    </script>
+</body>
+</html>

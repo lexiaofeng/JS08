@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css"></style>
+</head>
+<body>
+    <h1>cookie</h1>
+    <hr>
+
+    <script>
+    document.write('COOKIE: ' + document.cookie + '<br>');
+
+
+
+    // 设置
+    document.cookie = 'sex=0';
+    document.write('COOKIE: ' + document.cookie + '<br>');
+
+    // 路径 + 过期时间
+    var d = new Date();
+    d.setTime(d.getTime() + 3600 * 1000); // 未来1h
+    document.cookie = 'username=yanyan;path=/;expires='+ d.toUTCString();
+    document.write('COOKIE: ' + document.cookie + '<br>');
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>[新消息]您下载的 CHD-566.でザちパ绝美.avi 下载完成了!</title>
+    <style type="text/css"></style>
+</head>
+<body>
+    <h1>JS</h1>
+    <hr>
+
+    <p id="msg1">伯母你好,我是您儿子的男朋友.</p>
+    <p id="msg2">伯母你好,我是您儿子的男朋友.</p>
+
+    <h2 id="show"></h2>
+
+    <script>
+    // var mark = true;
+    // 标题闪烁效果
+    // setInterval(function(){
+    //     if (mark) {
+    //         document.title = '[新消息] 隔壁老王给你媳妇发来5条消息!';
+    //         mark = false;
+    //     } else {
+    //         document.title = '[　　　] 隔壁老王给你媳妇发来5条消息!';
+    //         mark = true;
+    //     }
+    // }, 500);
+
+
+
+
+    // 文字无限滚动
+    setInterval(function(){
+        var str = document.title;
+        // 取出第一个字符
+        var fstr = str.charAt(0);
+        // 取出除第一个字符以外的剩余字符
+        var estr = str.substr(1);
+        // 重新拼接并输出字串
+        document.title = estr + fstr;
+
+        // A:
+        var msg1 = document.getElementById('msg1');
+        var str1 = msg1.innerHTML;
+        msg1.innerHTML = str1.substr(1) + str1[0];
+        // B:
+        var msg2 = document.getElementById('msg2');
+        var str2 = msg2.innerHTML;
+        var arr = str2.split('');
+        arr.push(arr.shift());
+        msg2.innerHTML = arr.join('');
+        console.log(arr);
+    }, 500);
+
+    // 利用定时器写循环控制
+    // 文字跑马灯儿
+    var string = 'HOHO~ 这个世界需要更多的英雄!';
+    var i = 0;
+
+    setInterval(function (){
+        // 如果下标 超过了字串长度,则重置为0
+        if (i >= string.length) i = 0;
+
+        // 填充指定的文本
+        document.getElementById('show').innerHTML = show(i, string);
+        i++;
+    }, 300);
+
+    function show(i, str){
+        // 加样式: 
+        var tmp = '';
+        // 变前 
+        tmp += str.substr(0, i);
+        // 变中 
+        tmp += '<font size="7" color="red">'+str[i]+'</font>';
+        // 变后 
+        tmp +=str.substr(i+1);
+        return tmp;
+    }
+
+
+
+    
+    </script>
+</body>
+</html>

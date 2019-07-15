@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css"></style>
+</head>
+<body>
+    <h1>window</h1>
+    <hr>
+
+
+
+
+    <button onclick="window.open()">open</button>
+    <button onclick="window.open('http://www.jd.com')">JD</button>
+    <button onclick="window.open('http://www.tmall.com', 'yy')">TM</button>
+    <button onclick="window.open('http://www.tmall.com', '', 'height=600,width=300')">TM(指定大小)</button>
+
+    <button onclick="window.print()">打印</button>
+
+
+
+    <script>
+        window.name = 'yy';
+        // console.dir(window);
+        var obj = {name:'艳艳'};
+        console.log(obj);
+        console.log(window.obj);
+
+        var a = 100;
+        console.log(a);
+        console.log(window.a);
+
+        function demo(){
+            console.log('呆毛...');
+        }
+        demo();
+        window.demo();
+
+        // alert()   警告框
+        // var a = alert('警告!!!');
+        // console.log(a); // undefined
+        // confirm() 确认框
+        // var a = confirm('你确定吗?');
+        // console.log(a);
+        // prompt()  输入框
+        // var a = prompt('请输入您的银行卡密码:');
+        // console.log(a);
+
+
+    
+    </script>
+</body>
+</html>
